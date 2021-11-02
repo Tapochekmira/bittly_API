@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 
  
-def createParser ():
+def create_parser ():
     parser = argparse.ArgumentParser()
     parser.add_argument ('url', nargs='?')
  
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     load_dotenv()
     token = os.environ['BITLY_TOKEN']
     
-    parser = createParser()
+    parser = create_parser()
     url = parser.parse_args().url
 
     url_parse = urlparse(url)
